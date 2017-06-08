@@ -31,7 +31,7 @@
 
             </div>
             <div class="col-lg-6 col-md-6  col-sm-12">
-                <h3>Suggest</h3>
+                <h3>Contact Me</h3>
                 <hr />
                 <form action="{{ url('contact') }}" method="POST">
                     {{ csrf_field() }}
