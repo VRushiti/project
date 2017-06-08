@@ -10,7 +10,7 @@
             @foreach($posts as $post)
                 <div class="col-lg-4 col-md-4 col-sm-4 ">
                     <div class="portfolio-item">
-                        <img src="{{$post->photo->file}}" class="img-responsive " alt="" />
+                        <img src="{{$post->photo ? $post->photo->file : $post->photoPlaceholder()}}" class="img-responsive " alt="" />
                         <h5 >{{$post->title}}</h5>
                         <div class="overlay">
                             <a class="preview btn btn-success " title="Image Title Here" href="{{url('/post/'.trim(str_replace(' ', '-', $post->slug)))}}">VIEW PROJECT</a>

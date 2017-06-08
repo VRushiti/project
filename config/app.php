@@ -182,6 +182,9 @@ return [
         App\Providers\RouteServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
 
+        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+
     ],
 
     /*
@@ -232,5 +235,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 ];

@@ -3,7 +3,11 @@
 
 
 @section('content')
-
+    <style>
+        #right{
+            float:right
+        }
+    </style>
 
 
     <!-- Blog Post -->
@@ -14,23 +18,28 @@
     <!-- Author -->
     <p class="lead">
         by <a href="#">{{$post->user->name}}</a>
+
     </p>
 
     <hr>
 
     <!-- Date/Time -->
-    <p><span class="glyphicon glyphicon-time"></span> Posted {{$post->created_at->diffForHumans()}}</p>
+    <div>
+        <span class="glyphicon glyphicon-time"></span> Posted {{$post->created_at->diffForHumans()}}
+    <p id="right"><span  class="glyphicon glyphicon-collapse-down"></span>Category : <a href="#">{{$post->category->name}}</a></p>
+    </div>
+
 
     <hr>
 
     <!-- Preview Image -->
-    <img class="img-responsive" src="{{$post->photo->file}}" alt="">
+    <img class="img-responsive" src="{{$post->photo ? $post->photo->file : $post->photoPlaceholder()}}" alt="">
 
     <hr>
 
     <!-- Post Content -->
 
-    <p>{{$post->body}}</p>
+    <p>{!! $post->body !!}</p>
 
     <hr>
 
