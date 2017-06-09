@@ -170,3 +170,6 @@ Route::resource('admin/city', 'CityCategoriesController',['names'=>[
 ]]);
 
 
+
+
+

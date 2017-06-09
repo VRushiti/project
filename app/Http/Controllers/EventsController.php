@@ -10,6 +10,7 @@ use App\Quotes;
 use Illuminate\Support\Facades\Input;
 use App\About;
 
+
 class EventsController extends Controller
 {
     public function index(){

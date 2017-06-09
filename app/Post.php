@@ -66,6 +66,14 @@ class Post extends Model
 
     }
 
+    public function quotes(){
+
+
+        return $this->belongsTo('App\Quotes');
+
+
+    }
+
 
     public function category(){
 

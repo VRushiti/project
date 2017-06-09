@@ -165,7 +165,8 @@ class AdminUsersController extends Controller
 
         if(trim($request->password) == ""){
             $input = $request->except('password');
-        }else{
+        }
+        else{
 
 
             $input = $request->all();

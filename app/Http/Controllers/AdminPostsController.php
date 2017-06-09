@@ -7,6 +7,7 @@ use App\Http\Requests\PostsCreateRequest;
 use App\Photo;
 use App\Post;
 use App\City;
+use App\Quotes;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -26,11 +27,11 @@ class AdminPostsController extends Controller
 
 
         $posts = Post::paginate(5);
+        $quotes = Quotes::orderBy(DB::raw('RAND()'))->take(1)->get();
 
 
 
-
-        return view('admin.posts.index', compact('posts','categories','city'));
+        return view('admin.posts.index', compact('posts','categories','city','quotes'));
 
 
     }
