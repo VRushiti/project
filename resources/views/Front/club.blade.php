@@ -10,7 +10,7 @@
 
                 <div class="portfolio-item">
                     <a href="{{url('/post/'.trim(str_replace(' ', '-', $post->slug)))}}">
-                        <img width="550px" height="500px" src="{{$post->photo ? $post->photo->file : $post->photoPlaceholder()}}" class="img-responsive" alt=""/>
+                        <img width="x`" height="500px" src="{{$post->photo ? $post->photo->file : $post->photoPlaceholder()}}" class="img-responsive" alt=""/>
                         <h5 >{{$post->title}}</h5>
                     </a>
                 </div>

@@ -8,7 +8,7 @@
                     <div class="text-center">
                         <h2 class="without-margin"><span class="text-danger"><big>Access Denied</big></span></h2>
                         <h4 class="text-danger">You do not have permission for this page.</h4>
-                        <h4 class="text-danger">403</h4>
+                        <h4 class="text-danger">404</h4>
                     </div>
                     <div class="text-center">
                         <h3><small>Choose an option below</small></h3>

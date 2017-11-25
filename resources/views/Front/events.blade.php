@@ -3,7 +3,9 @@
 
 <div class="general-subhead">
     <h1>All Events</h1>
+
 </div>
+
 <section id="port-folio">
     <div class="container">
         <div class="row pad-row">

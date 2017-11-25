@@ -67,7 +67,11 @@ class AdminUsersController extends Controller
     public function store(UsersRequest $request)
     {
         //
+        $this->validate($request, [
+            'name' => "regex:/^[A-Za-z\s-_]+$",
+            'password' => 'min:6',
 
+        ]);
 
         if(trim($request->password) == ""){
 
@@ -125,7 +129,7 @@ class AdminUsersController extends Controller
     {
         //
 
-        return view('admin.uses.show');
+        return view('admin.users.show');
 
 
     }
@@ -162,9 +166,10 @@ class AdminUsersController extends Controller
 
         $user = User::findOrFail($id);
 
+        $input = $request->all();
 
         if(trim($request->password) == ""){
-            $input = $request->except('password');
+           $input = $request->except('password');
         }
         else{
 
@@ -174,7 +179,7 @@ class AdminUsersController extends Controller
         }
 
 
-        $input = $request->all();
+
 
         if($file = $request->file('photo_id')){
             $name = time() . $file->getClientOriginalName();
@@ -184,6 +189,8 @@ class AdminUsersController extends Controller
             $photo = Photo::create(['file'=>$name]);
 
             $input['photo_id'] = $photo->id;
+
+
         }
 
         $user->update($input);
